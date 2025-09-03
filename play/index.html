@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hayasi.online - TETRIS</title>
+    <link rel="stylesheet" href="tetris.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>🎮 TETRIS 🎮</h1>
+            <div class="score-board">
+                <div class="score-item">
+                    <span class="label">SCORE:</span>
+                    <span class="value" id="score">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="label">LEVEL:</span>
+                    <span class="value" id="level">1</span>
+                </div>
+                <div class="score-item">
+                    <span class="label">LINES:</span>
+                    <span class="value" id="lines">0</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="game-area">
+            <div class="game-board">
+                <canvas id="tetris" width="300" height="600"></canvas>
+            </div>
+            
+            <div class="side-panel">
+                <div class="next-piece">
+                    <h3>NEXT</h3>
+                    <canvas id="next" width="120" height="120"></canvas>
+                </div>
+                
+                <div class="controls">
+                    <h3>CONTROLS</h3>
+                    <div class="control-item">
+                        <span class="key">←→</span>
+                        <span class="action">Move</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="key">↓</span>
+                        <span class="action">Drop</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="key">↑</span>
+                        <span class="action">Rotate</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="key">SPACE</span>
+                        <span class="action">Hard Drop</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="key">P</span>
+                        <span class="action">Pause</span>
+                    </div>
+                </div>
+                
+                <div class="game-buttons">
+                    <button id="start-btn" class="game-btn">START</button>
+                    <button id="pause-btn" class="game-btn" disabled>PAUSE</button>
+                    <button id="reset-btn" class="game-btn">RESET</button>
+                    <button id="back-btn" class="game-btn back-btn" onclick="window.location.href='/'">← BACK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="tetris.js"></script>
+</body>
+</html>

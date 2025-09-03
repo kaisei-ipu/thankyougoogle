@@ -1,2 +1,56 @@
-thisis
-hayasi.online
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hayasi.online - アクセス情報</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>HAYASI.ONLINE</h1>
+        
+        <div class="info-grid">
+            <div class="info-item">
+                <div class="info-label">IP アドレス</div>
+                <div class="info-value" id="ip-address">
+                    <div class="loading">取得中...</div>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <div class="info-label">ブラウザ情報</div>
+                <div class="info-value" id="browser-info">
+                    <div class="loading">取得中...</div>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <div class="info-label">ISP / プロバイダー</div>
+                <div class="info-value" id="isp-info">
+                    <div class="loading">取得中...</div>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <div class="info-label">アクセス日時</div>
+                <div class="info-value" id="access-time">
+                    <div class="loading">取得中...</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            Powered by hayasi.online
+        </div>
+        
+        <div class="tetris-button-container">
+            <button class="tetris-button" onclick="window.location.href='/play'">
+                🎮 TETRIS PLAY 🎮
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

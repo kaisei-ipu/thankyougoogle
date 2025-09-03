@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'VT323', monospace;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: #00ff00;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid #00ff00;
+    border-radius: 10px;
+    padding: 40px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+    }
+    to {
+        box-shadow: 0 0 30px rgba(0, 255, 0, 0.6);
+    }
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px #00ff00;
+    letter-spacing: 2px;
+}
+
+.info-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.info-item {
+    background: rgba(0, 255, 0, 0.1);
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 1.2em;
+}
+
+.info-label {
+    font-weight: bold;
+    color: #ffff00;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.info-value {
+    color: #00ff00;
+    word-break: break-all;
+    line-height: 1.4;
+}
+
+.loading {
+    text-align: center;
+    font-size: 1.5em;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+.error {
+    color: #ff4444;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.1em;
+    color: #888;
+}
+
+.tetris-button-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.tetris-button {
+    font-family: 'VT323', monospace;
+    font-size: 1.5em;
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    border: 2px solid #00ff00;
+    border-radius: 10px;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+    animation: tetrisGlow 2s ease-in-out infinite alternate;
+}
+
+.tetris-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px rgba(0, 255, 0, 0.8);
+    background: linear-gradient(45deg, #ff8e8e, #6ee7df);
+}
+
+.tetris-button:active {
+    transform: translateY(0);
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+@keyframes tetrisGlow {
+    from {
+        box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+    }
+    to {
+        box-shadow: 0 0 25px rgba(0, 255, 0, 0.8);
+    }
+}
