@@ -41,6 +41,7 @@ function getOS() {
     if (userAgent.includes("Linux")) return "Linux";
     if (userAgent.includes("Android")) return "Android";
     if (userAgent.includes("iOS")) return "iOS";
+    if (userAgent.includes("CrOS")) return "ChromeOS";
     
     return "Unknown";
 }
